@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "Hiragino Sans";
+  src: local(HiraginoSans-W1);
+  font-weight: 200;
+}
+
+*{
+  font-family: Hiragino Sans;
+  outline: none;
+}
+
+.font-white{
+  color: #fff;
+}
+
+.font-gray{
+  color: #666666;
+}
+
+body{
+  width: 100%;
+  height: 150vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header{
+  width: 100%;
+  height: 12vh;
+  background-color: #B9E1DC;
+  position: fixed;
+}
+
+nav > ul{
+  height: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+nav > ul > li{
+  font-size: 30px;
+  font-weight: 200;
+  padding-bottom: 1vh;
+}
+
+
+.addBorder{
+  border-bottom: 2px solid #fff;
+}
+
+main{
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide{
+  width: 100%;
+/*  border: 5px solid #000;*/
+}
+
+.main1-wrapper{
+  color: #666;
+  margin-top: 75vh;
+  margin-left: 5vw;
+  margin-bottom: 5vh;
+  white-space: nowrap;
+}
+
+h1{
+  font-size: 55px;
+}
+
+.main1-p-wrapper p{
+  font-size: 20px;
+  margin-top: 5vh;
+  margin-left: 5vw;
+  line-height: 30px;
+}
+
+.main-wrapper a{
+  color: #666;
+}
+
+.main-wrapper a:visited{
+  color: #666;
+}
+
+footer{
+  width: 100%;
+  height: 12vh;
+  background-color: #B9E1DC;
+  margin-top: auto;
+}
+
+footer > aside > ul{
+  height: 12vh;
+  display: flex;
+  align-items: center; 
+  margin-left: 10vw;
+}
+
+footer > aside > ul > li{
+  margin: 0 1vw;
+}
+
+.fa-icon{
+  color: #fff;
+}
