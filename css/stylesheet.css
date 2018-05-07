@@ -3,10 +3,15 @@
   src: local('Letter Gothic Std');
 }
 
+a{
+  color: #fff;
+  text-decoration: none;
+}
+
 h3{
   text-align: center;
   font-size: 30px;
-  margin: 60px 0 30px;
+  margin: 60px 0 40px;
 }
 
 li{
@@ -213,24 +218,53 @@ main{
   padding: 50px 0;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .w-content{
+  color: #fff;
+  text-decoration: none;
   width: 400px;
-  height: 300px;
-  z-index: 10;
-}
-
-.w-content img{
-  width: inherit;
-  height: inherit;
-  object-fit: cover; /* この一行を追加するだけ！ */
+  height: 430px;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   transition: 0.3s;
 }
 
-.w-container img:hover{
+.w-content img{
+  position: relative;
+  width: inherit;
+  height: 300px;
+  object-fit: cover; /* この一行を追加するだけ！ */
+}
+
+.w-content:hover{
   -webkit-filter: grayscale(0%);
   filter: grayscale(0%);
+}
+
+.w-tag{
+  display: inline-block;
+  margin: 5px 0;
+  padding: 7px 5px;
+  border-radius: 5px;
+}
+
+.tag-app{
+  background: linear-gradient(-45deg, rgba(0, 209, 255, 0.8), rgba(252, 71, 108,.8));
+}
+
+.tag-site{
+  background: linear-gradient(-45deg, rgba(48, 232, 191,.8), rgba(255, 130, 54, .8));
+}
+
+.tag-unity{
+  background: linear-gradient(-45deg, rgba(223, 232, 48, 0.8), rgba(136, 54, 255, 0.8));
+}
+
+.w-title{
+  padding: 5px;
+  font-size: 17px;
+  letter-spacing: 1px;
+  line-height: 20px;
 }
