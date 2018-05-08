@@ -1,5 +1,5 @@
 body{
-  width: 100vw;
+  width: 98.8vw;
 }
 
 
@@ -10,15 +10,17 @@ body{
   font-size: 50px;
   font-weight: bold;
   z-index: 999;
+  text-decoration: none;
 }
 
 .thumbnail-box{
   position: relative;
-  width: 100vw;
+  width: 100%;
+  filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.6));
 }
 
 .thumbnail-img{
-  width: 100vw;
+  width: 100%;
   height: 80vh;
   object-fit: cover; /* この一行を追加するだけ！ */
 }
@@ -36,18 +38,26 @@ body{
   width: 80vw;
   font-size: 60px;
   margin: 25px 0 20px;
-  font-weight: bold;
   color: #041d21;
+  font-weight: bold;
 }
 
 .title-box p{
   margin: 10px 0;
 }
 
+.blue-band{
+  background: linear-gradient(90deg, rgb(8, 53, 61,.8), rgba(255,255,255, 0));
+  color: #fff;
+}
+
+.blue-band .works-title{
+  color: #fff;
+}
 
 
 .works-container{
-  width: 900px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -55,6 +65,12 @@ body{
 .works-detail{
   margin: 80px 0;
   line-height: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.works-detail:nth-child(odd){
+  flex-direction: row-reverse;
 }
 
 
@@ -64,5 +80,24 @@ body{
 }
 
 .works-detail-text{
-  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 65%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.works-detail-text p{
+  margin: 5px 0;
+}
+
+.works-detail img{
+  min-width: 30%;
+  margin: 0 20px;
+  height: auto;
+  max-height: 250px;
+  object-fit: contain;
+  filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.6));
+  border-radius: 2px;
 }
