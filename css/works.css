@@ -11,6 +11,13 @@ body{
   font-weight: bold;
   z-index: 999;
   text-decoration: none;
+  transition: .5s ;
+	transform: rotateZ( 0deg ) ;
+  transform-origin: 50% 38%;         // 要素の中央を中心とする
+}
+
+.close-button:hover{
+  transform: rotateZ( 360deg ) ;
 }
 
 .thumbnail-box{
@@ -90,6 +97,11 @@ body{
 
 .works-detail-text p{
   margin: 5px 0;
+}
+
+.works-detail-text span,
+.works-detail h2{
+  font-weight: bold;
 }
 
 .works-detail img{
