@@ -4,59 +4,113 @@ $('.animation1').css('visibility','hidden');
 $('.animation2').css('visibility','hidden');
 $('.animation3').css('visibility','hidden');
 
-window.onload = function(){  // ページ読み込み時に実行したい処理
-  $('.header-li1').addClass('li-active');
-  $('.header-li2').removeClass('li-active');
-  $('.header-li3').removeClass('li-active');
-
-  $('.animation1').addClass("fadeInDown");
-}
+var speed = 500;
 
 $(function(){
-
-  $('a[href^="#1"]').click(function(){
-    $('.header-li1').addClass('li-active');
-    $('.header-li2').removeClass('li-active');
-    $('.header-li3').removeClass('li-active');
-
-    bar1.animate(0);
-    bar2.animate(0);
-    bar3.animate(0);
-    bar4.animate(0);
+  $('a[href^="#"]').click(function(){
+    var href= $(this).attr("href");
+    var target = $(href == "#" || href == "" ? 'html' : href);
+    var position = target.offset().left;
+    $("html, body").animate({scrollLeft:position}, speed, "swing");
+    return false;
   });
+});
 
-  $('a[href^="#2"]').click(function(){
+var width = window.parent.screen.width;
+var boolpage1 = true;
+var boolpage2 = false;
+var boolpage3 = false;
+
+// document.onkeydown = function (event) {
+//
+//   var reverseWidth = width * (-1);
+//
+//   if(event.keyCode == 39){
+//     console.log("right");
+//     $("html, body").animate({scrollLeft:width}, speed, "swing");
+//     return false;
+//   };
+//
+//   if(event.keyCode == 37){
+//     $("html, body").animate({scrollLeft:reverseWidth}, speed, "swing");
+//     return false;
+//   }
+//
+//
+// };
+
+function page1(){
+  $('.header-li1').addClass('li-active');
+  $('.animation1').addClass("fadeInDown");
+};
+
+function page2(){
+  $('.header-li2').addClass('li-active');
+  bar1.animate(0.7);
+  bar2.animate(0.35);
+  bar3.animate(0.7);
+  bar4.animate(0.2);
+  $('.animation2').addClass("fadeInDown");
+};
+
+function page3(){
+  $('.header-li3').addClass('li-active');
+  $('.animation3').addClass("fadeInDown");
+};
+
+
+window.onload = function(){  // ページ読み込み時に実行したい処理
+  var position = $(window).scrollLeft();
+
+  if(position < width / 2){
+    page1();
+  }else if ((width / 2 <= position) && (position < width / 2 + width)){
+    page2();
+  }else if ((width / 2 + width <= position) && (position < width / 2 + width * 2)) {
+    page3();
+  }else{
+    return;
+  }
+}
+
+window.onscroll = function(){
+  var position = $(window).scrollLeft();
+
+  if(position < width / 2){
+    boolpage1 = "true";
+    if(boolpage1 == "true"){
+      page1();
+    }
+  }else{
     $('.header-li1').removeClass('li-active');
-    $('.header-li2').addClass('li-active');
+    boolpage1 = "false";
+  }
+
+  if ((width / 2 <= position) && (position < width / 2 + width)) {
+    boolpage2 = "true";
+      if(boolpage2 == "true"){
+        page2();
+      }
+    }else{
+      $('.header-li2').removeClass('li-active');
+      bar1.animate(0);
+      bar2.animate(0);
+      bar3.animate(0);
+      bar4.animate(0);
+      boolpage2 = "false";
+    }
+
+
+  if ((width / 2 + width <= position) && (position < width / 2 + width * 2)) {
+    boolpage3 = "true";
+      if(boolpage3 == "true"){
+        page3();
+      }
+    }else{
     $('.header-li3').removeClass('li-active');
-
-    setTimeout( function() {
-
-      bar1.animate(0.7);
-      bar2.animate(0.35);
-      bar3.animate(0.7);
-      bar4.animate(0.2);
-
-      $('.animation2').addClass("fadeInDown");
-    }, 400);
-
-  });
-
-  $('a[href^="#3"]').click(function(){
-    $('.header-li1').removeClass('li-active');
-    $('.header-li2').removeClass('li-active');
-    $('.header-li3').addClass('li-active');
-
-    bar1.animate(0);
-    bar2.animate(0);
-    bar3.animate(0);
-    bar4.animate(0);
-
-    setTimeout( function() {
-      $('.animation3').addClass("fadeInDown");
-    }, 400);
-  });
-
+    boolpage3 = "false";
+    }
+}
 
   bar1 = new ProgressBar.Circle(container, {
     color: '#00d1ff',
@@ -118,16 +172,3 @@ $(function(){
       circle.path.setAttribute('stroke', state.color);
     }
   });
-
-});
-
-$(function(){
-  $('a[href^="#"]').click(function(){
-    var speed = 500;
-    var href= $(this).attr("href");
-    var target = $(href == "#" || href == "" ? 'html' : href);
-    var position = target.offset().left;
-    $("html, body").animate({scrollLeft:position}, speed, "swing");
-    return false;
-  });
-});
