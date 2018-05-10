@@ -32,13 +32,27 @@ body{
   object-fit: cover; /* この一行を追加するだけ！ */
 }
 
+@media screen and (max-width:480px){
+  .thumbnail-img{
+    height: 60vh;
+  }
+}
+
 .title-box{
   position: absolute;
   height: 20vh;
   background: linear-gradient(90deg, rgba(255,255,255, 0.8), rgba(255,255,255, 0));
   bottom: 3px;
   color: #041d21;
-  padding-left: 150px;
+  padding-left: 15%;
+}
+
+@media screen and (max-width:480px){
+  .title-box{
+    height: 20vh;
+    padding-left: 5%;
+    bottom: 10px;
+  }
 }
 
 .works-title{
@@ -49,8 +63,24 @@ body{
   font-weight: bold;
 }
 
+
+@media screen and (max-width:480px){
+  .works-title{
+    font-size: 2rem;
+    margin: 0;
+  }
+}
+
 .title-box p{
   margin: 10px 0;
+}
+
+@media screen and (max-width:480px){
+  .title-box p{
+    margin: 0;
+    white-space: nowrap;
+    line-height: 1.5;
+  }
 }
 
 .blue-band{
@@ -68,6 +98,12 @@ body{
   margin: 0 auto;
 }
 
+@media screen and (max-width:480px){
+  .works-container{
+    width: 80%;
+  }
+}
+
 
 .works-detail{
   margin: 80px 0;
@@ -76,8 +112,20 @@ body{
   justify-content: space-between;
 }
 
+@media screen and (max-width:480px){
+  .works-detail{
+    flex-direction: column;
+  }
+}
+
 .works-detail:nth-child(odd){
   flex-direction: row-reverse;
+}
+
+@media screen and (max-width:480px){
+  .works-detail:nth-child(odd){
+    flex-direction: column;
+  }
 }
 
 
@@ -112,4 +160,10 @@ body{
   object-fit: contain;
   filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.6));
   border-radius: 2px;
+}
+
+@media screen and (max-width:480px){
+  .works-detail img{
+    margin: 0;
+  }
 }

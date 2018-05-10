@@ -17,27 +17,28 @@ $(function(){
 });
 
 var width = window.parent.screen.width;
+var reverseWidth = width * (-1);
+
 var boolpage1 = true;
 var boolpage2 = false;
 var boolpage3 = false;
 
-// document.onkeydown = function (event) {
-//
-//   var reverseWidth = width * (-1);
-//
-//   if(event.keyCode == 39){
-//     console.log("right");
-//     $("html, body").animate({scrollLeft:width}, speed, "swing");
-//     return false;
-//   };
-//
-//   if(event.keyCode == 37){
-//     $("html, body").animate({scrollLeft:reverseWidth}, speed, "swing");
-//     return false;
-//   }
-//
-//
-// };
+
+document.onkeydown = function (event) {
+  var position = $(window).scrollLeft();
+
+  if(event.keyCode == 39){
+    $("html, body").animate({scrollLeft:width + position}, speed, "swing");
+    return false;
+  };
+
+  if(event.keyCode == 37){
+    $("html, body").animate({scrollLeft:reverseWidth + position}, speed, "swing");
+    return false;
+  }
+
+
+};
 
 function page1(){
   $('.header-li1').addClass('li-active');
@@ -47,7 +48,7 @@ function page1(){
 function page2(){
   $('.header-li2').addClass('li-active');
   bar1.animate(0.7);
-  bar2.animate(0.35);
+  bar2.animate(0.5);
   bar3.animate(0.7);
   bar4.animate(0.2);
   $('.animation2').addClass("fadeInDown");
@@ -73,7 +74,9 @@ window.onload = function(){  // ページ読み込み時に実行したい処理
   }
 }
 
+
 window.onscroll = function(){
+
   var position = $(window).scrollLeft();
 
   if(position < width / 2){
