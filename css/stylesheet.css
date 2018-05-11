@@ -221,7 +221,14 @@ main{
   justify-content: space-between;
 }
 
-@media screen and (max-width:480px){
+
+@media screen and (max-width: 768px){
+  .circle-box{
+    width: 70vw;
+  }
+}
+
+@media screen and (max-width: 480px){
   .circle-box{
     width: 90vw;
     margin: 30px auto;
@@ -235,12 +242,13 @@ main{
   height: 20%;
 }
 
-@media screen and (max-width:480px){
+@media screen and (max-width: 768px){
   .circle{
     width: 30%;
     height: 30%;
   }
 }
+
 
 .circle p{
   position: absolute;
@@ -258,6 +266,7 @@ main{
   width: 80%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .s-content{
@@ -284,18 +293,19 @@ main{
 
 
 .w-container{
-  width: 90%;
+  width: 70%;
   padding: 50px 0;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-@media screen and (max-width:480px){
+@media screen and (max-width: 768px){
   .w-container{
     width: 80%;
   }
 }
+
 
 .w-content{
   color: #fff;
@@ -307,12 +317,18 @@ main{
   transition: 0.3s;
 }
 
+@media screen and (max-width: 768px){
+  .w-content{
+    height: 350px;
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+  }
+}
+
 @media screen and (max-width:480px){
   .w-content{
     width: 100%;
     height: 400px;
-    -webkit-filter: grayscale(0%);
-    filter: grayscale(0%);
   }
 }
 
@@ -326,7 +342,7 @@ main{
   border-radius: 2px;
 }
 
-@media screen and (max-width:480px){
+@media screen and (max-width: 768px){
   .w-content img{
     height: 200px;
   }
@@ -367,4 +383,26 @@ main{
   .w-title{
     font-size: 14px;
   }
+}
+
+
+.sns-box{
+  width: 60%;
+  margin: 80px auto 0;
+}
+
+.sns-box ul{
+  display: flex;
+  justify-content: space-between;
+}
+
+.fab{
+  font-size: 5rem;
+}
+
+@media screen and (max-width:480px){
+  .fab{
+    font-size: 3rem;
+  }
+
 }
