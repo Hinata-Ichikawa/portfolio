@@ -153,7 +153,7 @@ main{
   padding: 100px 0;
 }
 
-@media screen and (max-width:768px){
+@media screen and (max-width:480px){
   .p-container{
     width: 100vw;
   }
@@ -165,16 +165,16 @@ main{
   text-align: center;
 }
 
-@media screen and (max-width:768px){
+@media screen and (max-width:480px){
   .title{
-    font-size: 3rem;
+    font-size: 2.5rem;
     padding-top: 90px;
     width: 100vw;
   }
 }
 
 .subtitle{
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   margin: 30px 0;
   text-align: center;
 }
