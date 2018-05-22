@@ -1,7 +1,4 @@
-@font-face {
-  font-family: LetterGothicStd;
-  src: local('Letter Gothic Std');
-}
+
 a{
   color: #fff;
 }
@@ -21,13 +18,15 @@ li{
 }
 
 p{
+  font-weight: 100;
   letter-spacing: .1em;
   font-size: 14px;
   margin-bottom: 7px;
 }
 
 body{
-  font-family: LetterGothicStd,'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif;
+  font-family: letter-gothic-std, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', monospace, Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+  font-style: normal;
   width: 300vw;
   color: #eee;
   background-color: #08353d;

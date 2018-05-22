@@ -47,10 +47,10 @@ function page1(){
 
 function page2(){
   $('.header-li2').addClass('li-active');
-  bar1.animate(0.7);
+  bar1.animate(0.8);
   bar2.animate(0.5);
   bar3.animate(0.7);
-  bar4.animate(0.2);
+  bar4.animate(0.25);
   $('.animation2').addClass("fadeInDown");
 };
 

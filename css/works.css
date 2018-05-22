@@ -1,7 +1,14 @@
 body{
+  box-sizing: border-box;
   width: 98.8vw;
 }
 
+@media screen and (max-width:480px){
+  body{
+    box-sizing: border-box;
+    width: 100vw;
+  }
+}
 
 .close-button{
   position: fixed;
@@ -13,7 +20,8 @@ body{
   text-decoration: none;
   transition: .5s ;
 	transform: rotateZ( 0deg ) ;
-  transform-origin: 50% 38%;         // 要素の中央を中心とする
+  transform-origin: 55% 50%;
+  filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.6));
 }
 
 .close-button:hover{
@@ -59,7 +67,7 @@ body{
   font-size: 60px;
   margin: 25px 0 20px;
   color: #041d21;
-  font-weight: bold;
+  /* font-weight: ; */
 }
 
 
