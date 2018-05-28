@@ -22,11 +22,13 @@ p{
   letter-spacing: .1em;
   font-size: 14px;
   margin-bottom: 7px;
+  line-height: 24px;
 }
 
 body{
-  font-family: letter-gothic-std, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', monospace, Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+  font-family: letter-gothic-std, 'Hiragino Sans', monospace, Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
   font-style: normal;
+  font-weight: 100;
   width: 300vw;
   color: #eee;
   background-color: #08353d;
@@ -212,6 +214,33 @@ main{
 
 
 
+.s-top{
+  text-align: center;
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 768px){
+  .s-top{
+    text-align: left;
+    padding: 25px;
+  }
+}
+
+.s-top p{
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px){
+  .s-top p{
+    text-align: center;
+  }
+}
+
+.s-top li{
+  line-height: 24px;
+}
+
 .circle-box{
   width: 1000px;
   margin: 60px auto;
@@ -251,7 +280,7 @@ main{
 
 .circle p{
   position: absolute;
-  font-size: 18px;
+  font-size: 20px;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%,-50%);
@@ -371,6 +400,10 @@ main{
   background: linear-gradient(-45deg, rgba(223, 232, 48, 0.8), rgba(136, 54, 255, 0.8));
 }
 
+.tag-design{
+  background: linear-gradient(-45deg, rgba(0, 10, 255, 0.8), rgba(255, 54, 54, 0.8));
+}
+
 .w-title{
   padding: 5px;
   font-size: 17px;
@@ -388,6 +421,11 @@ main{
 .sns-box{
   width: 60%;
   margin: 80px auto 0;
+}
+
+.sns-box p{
+  text-align: center;
+  margin: 30px 0;
 }
 
 .sns-box ul{

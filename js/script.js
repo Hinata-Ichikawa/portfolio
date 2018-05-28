@@ -47,10 +47,10 @@ function page1(){
 
 function page2(){
   $('.header-li2').addClass('li-active');
-  bar1.animate(0.8);
-  bar2.animate(0.5);
+  bar1.animate(0.83);
+  bar2.animate(0.45);
   bar3.animate(0.7);
-  bar4.animate(0.25);
+  bar4.animate(0.3);
   $('.animation2').addClass("fadeInDown");
 };
 
@@ -169,7 +169,7 @@ window.onscroll = function(){
     easing: 'bounce',
     strokeWidth: 4,
     from: {color: '#00d1ff', a:0},
-    to: {color: '#0021ff', a:1},
+    to: {color: '#3751ff', a:1},
     // Set default step function for all animate calls
     step: function(state, circle) {
       circle.path.setAttribute('stroke', state.color);
