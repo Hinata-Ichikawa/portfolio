@@ -1,9 +1,5 @@
 var bar1,bar2,bar3,bar4;
 
-$('.animation1').css('visibility','hidden');
-$('.animation2').css('visibility','hidden');
-$('.animation3').css('visibility','hidden');
-
 var speed = 500;
 
 $(function(){
@@ -40,23 +36,35 @@ document.onkeydown = function (event) {
 
 };
 
+$(window).scroll(function (){
+    $('.animation1').each(function(){
+        var POS = $(this).offset().top;  //fade-inがついている要素の位置
+        var scroll = $(window).scrollTop();  //スクロール一
+        var windowHeight = $(window).height();  //ウィンドウの高さ
+
+        if (scroll > POS - windowHeight + windowHeight/4){
+            $(this).css("opacity","1" );
+        }
+    });
+});
+
 function page1(){
   $('.header-li1').addClass('li-active');
-  $('.animation1').addClass("fadeInDown");
+  $('.animation1').addClass("fadeIn");
 };
 
 function page2(){
   $('.header-li2').addClass('li-active');
   bar1.animate(0.83);
-  bar2.animate(0.45);
+  bar2.animate(0.65);
   bar3.animate(0.7);
   bar4.animate(0.3);
-  $('.animation2').addClass("fadeInDown");
+  $('.animation2').addClass("fadeIn");
 };
 
 function page3(){
   $('.header-li3').addClass('li-active');
-  $('.animation3').addClass("fadeInDown");
+  $('.animation3').addClass("fadeIn");
 };
 
 
