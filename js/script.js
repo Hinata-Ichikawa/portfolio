@@ -7,6 +7,10 @@ $(function(){
     var href= $(this).attr("href");
     var target = $(href == "#" || href == "" ? 'html' : href);
     var position = target.offset().left;
+    var scroll = $(window).scrollTop();
+    if(scroll > 50){
+      $('body,html').animate({scrollTop: 0},speed, "swing");
+    }
     $("html, body").animate({scrollLeft:position}, speed, "swing");
     return false;
   });
@@ -37,12 +41,12 @@ document.onkeydown = function (event) {
 };
 
 $(window).scroll(function (){
-    $('.animation1').each(function(){
+    $('.p-box').each(function(){
         var POS = $(this).offset().top;  //fade-inがついている要素の位置
         var scroll = $(window).scrollTop();  //スクロール一
         var windowHeight = $(window).height();  //ウィンドウの高さ
 
-        if (scroll > POS - windowHeight + windowHeight/4){
+        if (scroll > POS - windowHeight + windowHeight/6){
             $(this).css("opacity","1" );
         }
     });
@@ -50,7 +54,6 @@ $(window).scroll(function (){
 
 function page1(){
   $('.header-li1').addClass('li-active');
-  $('.animation1').addClass("fadeIn");
 };
 
 function page2(){
@@ -59,12 +62,10 @@ function page2(){
   bar2.animate(0.65);
   bar3.animate(0.7);
   bar4.animate(0.3);
-  $('.animation2').addClass("fadeIn");
 };
 
 function page3(){
   $('.header-li3').addClass('li-active');
-  $('.animation3').addClass("fadeIn");
 };
 
 
