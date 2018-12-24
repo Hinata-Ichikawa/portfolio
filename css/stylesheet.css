@@ -87,8 +87,8 @@ nav{
 
 @media screen and (max-width:480px){
   .header-ul{
-    width: 85%;
-    margin: 10px auto;
+    width: 75%;
+    margin: 0 auto;
     padding: 0;
   }
 }
@@ -99,7 +99,7 @@ nav{
 
 @media screen and (max-width:480px){
   .header-ul li{
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
@@ -170,6 +170,7 @@ main{
     font-size: 1.8rem;
     padding-top: 90px;
     width: 100vw;
+    line-height: 50px;
   }
 }
 
@@ -183,6 +184,7 @@ main{
   .subtitle{
     width: 100vw;
     font-size: 1.5rem;
+    margin: 10px 0;
   }
 }
 
@@ -301,7 +303,7 @@ main{
 
 @media screen and (max-width: 480px){
   .circle-box{
-    width: 90vw;
+    width: 70vw;
     margin: 30px auto;
   }
 }
@@ -357,10 +359,11 @@ main{
 
   .s-content h3{
     font-size: 24px;
+    margin: 30px 0;
   }
 
   .s-content li{
-    margin-bottom: 5px;
+    margin-bottom: 0;
   }
 }
 
@@ -380,7 +383,7 @@ main{
 
 @media screen and (max-width: 768px){
   .w-container{
-    width: 70%;
+    width: 90%;
   }
 }
 
@@ -402,7 +405,7 @@ main{
 
 @media screen and (max-width:480px){
   .w-content{
-    width: 100%;
+    width: 45%;
   }
 }
 
@@ -418,7 +421,7 @@ main{
 
 @media screen and (max-width: 768px){
   .w-content img{
-    height: 200px;
+    height: auto;
   }
 }
 
@@ -466,8 +469,9 @@ main{
 }
 
 @media screen and (max-width:480px){
+
   .w-title{
-    font-size: 14px;
+    font-size: 10px;
     margin-bottom: 40px;
   }
 }
